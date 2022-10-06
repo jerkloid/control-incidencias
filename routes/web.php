@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/lista', [IncidenceController::class, 'index'])->name('listado');
 //Route::get('/lista', [IncidenceController::class, 'index'])->name('listado');
 Route::get('/incidences/redNueva', [IncidenceController::class, 'redNueva'])->name('redNueva');
+Route::get('/incidences/showSol/{id}/{i_id}', [IncidenceController::class, 'showSol'])->name('showSol');
 Route::resource('incidences', IncidenceController::class);
 
 //Route::view('Incidencias.nueva', 'nueva');

@@ -67,7 +67,7 @@
                             <td>{{ $solution->incidence_id }}</td>
                             <td>{{ $solution->status }}</td>
                             <td>{{ $solution->user_id }}</td>
-                            <td><a class="btn btn-primary" href="#" >ver</a></td>
+                            <td><a class="btn btn-primary" href="{{ route('showSol', ['id' => $solution->id, 'i_id' => $solution->incidence_id]) }}" >ver</a></td>
                         </tr>
                     @endforeach
 

@@ -37,7 +37,13 @@ class IncidenceController extends Controller
     {
         //
     }
-
+    public function showSol($id, $i_id)
+    {
+        $incidences = Incidence::find($i_id);
+        $solutions = Solution::find($id);
+        //dd($solutions);
+        return view('Incidencias.showSolicitud', ['incidences' => $incidences, 'solutions' => $solutions]);
+    }
     /**
      * Store a newly created resource in storage.
      *
